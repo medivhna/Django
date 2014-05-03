@@ -13,7 +13,7 @@ import datetime
 
 def current_date(request):
 	now = datetime.datetime.now()
-	return render_to_response('current_datetime.html', {'current_date': now}})
+	return render_to_response('current_datetime.html', {'current_date': now})
 def hours_ahead(request, offset):
 	try:
 		offset = int(offset)
