@@ -1,6 +1,12 @@
 from django.http import Http404, HttpResponse
+from django.template.loader import get_template 
+from django.template import Context
 import datetime
 
+def current_datetime(request):
+	now = datetime.datetime.now()
+	t = get_template('current_datetime.html')
+	html = t.render(Context({'current_date': now}))
 def hours_ahead(request, offset):
 	try:
 		offset = int(offset)
