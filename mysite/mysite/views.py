@@ -11,7 +11,7 @@ import datetime
 #	html = t.render(Context({'current_date': now}))
 #	return HttpResponse(html)
 
-def current_date(request):
+def current_datetime(request):
 	now = datetime.datetime.now()
 	return render_to_response('current_datetime.html', {'current_date': now})
 def hours_ahead(request, offset):
