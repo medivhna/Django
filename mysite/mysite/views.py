@@ -12,8 +12,8 @@ import datetime
 #	return HttpResponse(html)
 
 def current_datetime(request):
-	now = datetime.datetime.now()
-	return render_to_response('current_datetime.html', {'current_date': now})
+	current_date = datetime.datetime.now()
+	return render_to_response('current_datetime.html', locals())
 def hours_ahead(request, offset):
 	try:
 		offset = int(offset)
