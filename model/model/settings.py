@@ -80,3 +80,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
+DATABASE_ENGINE = 'mysql'
+DATABASE_NAME = 'BASE_DIR'
+DATABASE_USER = 'root'
+DATABASE_PASSWORD = '123ewq'
+DATABASE_HOST = ''
+DATABASE_PORT = ''
