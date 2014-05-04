@@ -2,6 +2,10 @@ from django.http import Http404, HttpResponse
 from django.shortcuts import render_to_response
 import datetime
 
+# Local method
+#def current_datetime(request):
+#	current_date = datetime.datetime.now()
+#	return render_to_response('current_datetime.html', locals())
 # Older Method
 #from django.template.loader import get_template 
 #from django.template import Context
@@ -10,10 +14,10 @@ import datetime
 #	t = get_template('current_datetime.html')
 #	html = t.render(Context({'current_date': now}))
 #	return HttpResponse(html)
-
 def current_datetime(request):
-	current_date = datetime.datetime.now()
-	return render_to_response('current_datetime.html', locals())
+	now = datetime.datetime.now()
+	return render_to_response('current_datetime.html', {'current_date': now})
+
 def hours_ahead(request, offset):
 	try:
 		offset = int(offset)
