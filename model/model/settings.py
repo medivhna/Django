@@ -57,8 +57,10 @@ WSGI_APPLICATION = 'model.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mydb',
+		'USER': 'root'
+		'PASSWORD': '123ewq'
     }
 }
 
@@ -80,10 +82,3 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
-
-DATABASE_ENGINE = 'mysql'
-DATABASE_NAME = 'BASE_DIR'
-DATABASE_USER = 'root'
-DATABASE_PASSWORD = '123ewq'
-DATABASE_HOST = ''
-DATABASE_PORT = ''
